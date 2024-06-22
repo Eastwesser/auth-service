@@ -31,8 +31,7 @@ The Auth Service for the Candy-Star project is a microservice for managing user 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/Eastwesser/candy-star.git
-    cd candy-star/backend/auth-service
+    git clone https://github.com/Eastwesser/auth-service.git
     ```
 
 2. Create a virtual environment and activate it:
