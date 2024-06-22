@@ -182,7 +182,7 @@ auth-service/
     └── test_auth.py
 ```
 
-Example Contents of requirements.txt
+## Example Contents of requirements.txt
 
 ```
 fastapi
@@ -198,9 +198,12 @@ aio-pika
 pydantic
 ```
 
-Contact
+### Contact
+
 For questions and suggestions:
 
 Me - eastwesser@gmail.com
+
 GitHub - https://github.com/Eastwesser
+
 © 2024 Candy-Star. All rights reserved."# auth-service" 
