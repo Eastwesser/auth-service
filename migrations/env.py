@@ -1,8 +1,14 @@
+import os
+import sys
 from logging.config import fileConfig
 
 from alembic import context
-from sqlalchemy import engine_from_config, pool
+from sqlalchemy import create_engine
 
+# Add the root of the project to the Python path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+# Now import your Base model from the app module
 from app.models.models import Base
 
 config = context.config
@@ -21,11 +27,7 @@ def run_migrations_offline():
 
 
 def run_migrations_online():
-    connectable = engine_from_config(
-        config.get_section(config.config_ini_section),
-        prefix="sqlalchemy.",
-        poolclass=pool.NullPool,
-    )
+    connectable = create_engine(config.get_main_option("sqlalchemy.url"))
 
     with connectable.connect() as connection:
         context.configure(
